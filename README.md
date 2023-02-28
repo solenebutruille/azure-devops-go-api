@@ -1,6 +1,6 @@
-[![Go](https://github.com/microsoft/azure-devops-go-api/workflows/Go/badge.svg)](https://github.com/microsoft/azure-devops-go-api/actions)
+[![Go](https://github.com/solenebutruille/azure-devops-go-api/workflows/Go/badge.svg)](https://github.com/solenebutruille/azure-devops-go-api/actions)
 [![Build Status](https://dev.azure.com/mseng/vsts-cli/_apis/build/status/microsoft.azure-devops-go-api?branchName=dev)](https://dev.azure.com/mseng/vsts-cli/_build/latest?definitionId=9110&branchName=dev)
-[![Go Report Card](https://goreportcard.com/badge/github.com/microsoft/azure-devops-go-api)](https://goreportcard.com/report/github.com/microsoft/azure-devops-go-api)
+[![Go Report Card](https://goreportcard.com/badge/github.com/solenebutruille/azure-devops-go-api)](https://goreportcard.com/report/github.com/solenebutruille/azure-devops-go-api)
 
 # Azure DevOps Go API
 This repository contains Go APIs for interacting with and managing Azure DevOps.
@@ -13,8 +13,8 @@ package main
 
 import (
 	"context"
-	"github.com/microsoft/azure-devops-go-api/azuredevops"
-	"github.com/microsoft/azure-devops-go-api/azuredevops/core"
+	"github.com/solenebutruille/azure-devops-go-api/azuredevops"
+	"github.com/solenebutruille/azure-devops-go-api/azuredevops/core"
 	"log"
 )
 

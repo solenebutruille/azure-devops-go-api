@@ -13,8 +13,8 @@ import (
 	"context"
 	"encoding/json"
 	"github.com/google/uuid"
-	"github.com/microsoft/azure-devops-go-api/azuredevops/v6"
-	"github.com/microsoft/azure-devops-go-api/azuredevops/v6/searchshared"
+	"github.com/solenebutruille/azure-devops-go-api/azuredevops/v6"
+	"github.com/solenebutruille/azure-devops-go-api/azuredevops/v6/searchshared"
 	"net/http"
 )
 

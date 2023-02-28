@@ -9,9 +9,9 @@
 package maven
 
 import (
-	"github.com/microsoft/azure-devops-go-api/azuredevops/v6"
-	"github.com/microsoft/azure-devops-go-api/azuredevops/v6/packagingshared"
-	"github.com/microsoft/azure-devops-go-api/azuredevops/v6/webapi"
+	"github.com/solenebutruille/azure-devops-go-api/azuredevops/v6"
+	"github.com/solenebutruille/azure-devops-go-api/azuredevops/v6/packagingshared"
+	"github.com/solenebutruille/azure-devops-go-api/azuredevops/v6/webapi"
 )
 
 type MavenBatchOperationType string

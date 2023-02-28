@@ -10,9 +10,9 @@ package location
 
 import (
 	"github.com/google/uuid"
-	"github.com/microsoft/azure-devops-go-api/azuredevops"
-	"github.com/microsoft/azure-devops-go-api/azuredevops/identity"
-	"github.com/microsoft/azure-devops-go-api/azuredevops/webapi"
+	"github.com/solenebutruille/azure-devops-go-api/azuredevops"
+	"github.com/solenebutruille/azure-devops-go-api/azuredevops/identity"
+	"github.com/solenebutruille/azure-devops-go-api/azuredevops/webapi"
 )
 
 type AccessMapping struct {
