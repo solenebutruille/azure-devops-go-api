@@ -7,6 +7,7 @@ import (
 	"context"
 	"crypto/tls"
 	"encoding/base64"
+	"net/http"
 	"strings"
 	"sync"
 	"time"
@@ -45,6 +46,7 @@ type Connection struct {
 	clientCacheLock         sync.RWMutex
 	resourceAreaCache       map[uuid.UUID]ResourceAreaInfo
 	resourceAreaCacheLock   sync.RWMutex
+	Client                  *http.Client
 }
 
 func CreateBasicAuthHeaderValue(username, password string) string {

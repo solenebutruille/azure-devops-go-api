@@ -53,15 +53,27 @@ var baseUserAgent = "go/" + runtime.Version() + " (" + runtime.GOOS + " " + runt
 // NewClient provides an Azure DevOps client
 // and copies the TLS config and timeout from the supplied connection
 func NewClient(connection *Connection, baseUrl string) *Client {
-	httpClient := &http.Client{}
+	var client *http.Client
+
 	if connection.TlsConfig != nil {
-		httpClient.Transport = &http.Transport{TLSClientConfig: connection.TlsConfig}
-	}
-	if connection.Timeout != nil {
-		httpClient.Timeout = *connection.Timeout
+		client = &http.Client{Transport: &http.Transport{TLSClientConfig: connection.TlsConfig}}
+	} else if connection.Client != nil {
+		client = connection.Client
+	} else {
+		client = &http.Client{}
 	}
 
-	return NewClientWithOptions(connection, baseUrl, WithHTTPClient(httpClient))
+	if connection.Timeout != nil {
+		client.Timeout = *connection.Timeout
+	}
+	return &Client{
+		baseUrl:                 baseUrl,
+		client:                  client,
+		authorization:           connection.AuthorizationString,
+		suppressFedAuthRedirect: connection.SuppressFedAuthRedirect,
+		forceMsaPassThrough:     connection.ForceMsaPassThrough,
+		userAgent:               connection.UserAgent,
+	}
 }
 
 // NewClientWithOptions returns an Azure DevOps client modified by the options
